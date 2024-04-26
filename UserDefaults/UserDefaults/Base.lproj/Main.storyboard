@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserDefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сортировка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S1-qS-pSW">
+                                <rect key="frame" x="20" y="79" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Размер фотографии" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDp-EK-ZXS">
+                                <rect key="frame" x="20" y="120" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8rN-zm-ADU">
+                                <rect key="frame" x="361" y="79" width="51" height="31"/>
+                                <connections>
+                                    <action selector="sortingSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jlm-6s-jCc"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diH-PN-h7m">
+                                <rect key="frame" x="361" y="130" width="51" height="31"/>
+                                <connections>
+                                    <action selector="photoSizeSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wC1-ma-gW7"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="9S1-qS-pSW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7ia-y9-PC7"/>
+                            <constraint firstItem="FDp-EK-ZXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="N27-Lq-j8W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="diH-PN-h7m" secondAttribute="trailing" constant="20" id="Nq6-H7-8bs"/>
+                            <constraint firstItem="8rN-zm-ADU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Tjl-O8-suV"/>
+                            <constraint firstItem="diH-PN-h7m" firstAttribute="leading" secondItem="FDp-EK-ZXS" secondAttribute="trailing" constant="179" id="Tn5-gX-9Ok"/>
+                            <constraint firstItem="9S1-qS-pSW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XsS-86-GmX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8rN-zm-ADU" secondAttribute="trailing" constant="20" id="cuS-rP-Fub"/>
+                            <constraint firstItem="FDp-EK-ZXS" firstAttribute="top" secondItem="9S1-qS-pSW" secondAttribute="bottom" constant="20" id="s4c-6M-Q8p"/>
+                            <constraint firstItem="8rN-zm-ADU" firstAttribute="leading" secondItem="9S1-qS-pSW" secondAttribute="trailing" constant="245" id="uA1-5n-nRk"/>
+                            <constraint firstItem="diH-PN-h7m" firstAttribute="top" secondItem="8rN-zm-ADU" secondAttribute="bottom" constant="20" id="ydF-gb-DJv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoSizeSwitch" destination="diH-PN-h7m" id="LTj-FW-ykm"/>
+                        <outlet property="sortingSwitch" destination="8rN-zm-ADU" id="Z8K-gJ-2iG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

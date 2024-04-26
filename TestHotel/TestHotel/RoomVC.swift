@@ -7,26 +7,31 @@
 
 import UIKit
 
-class RoomVC: UIViewController {
-
-    @IBOutlet weak var buttonRoom: UIButton!
+class RoomVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var myImages = ["1", "2", "3"]
+    var myPage = UIPageControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        myPage.numberOfPages = myImages.count
+        myPage.currentPage = 0
     }
-    @IBAction func buttonRoomAction(_ sender: Any) {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        myPage.currentPage = indexPath.item
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return myImages.count
+    }
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCell
+        cell.image.image = UIImage(named: myImages[indexPath.item])
+        cell.image.layer.cornerRadius = 15
+        return cell
+    }
+}
+class MyCell: UICollectionViewCell {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var page: UIPageControl!
 }

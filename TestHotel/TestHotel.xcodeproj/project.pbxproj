@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A717549A2B37471900629C5D /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71754992B37471900629C5D /* GalleryCollectionView.swift */; };
-		A717549C2B3758D100629C5D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717549B2B3758D100629C5D /* ImageModel.swift */; };
-		A717549E2B375CBB00629C5D /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717549D2B375CBB00629C5D /* GalleryCollectionViewCell.swift */; };
 		A76EE8EF2B36989300F6D94B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76EE8EE2B36989300F6D94B /* AppDelegate.swift */; };
 		A76EE8F12B36989300F6D94B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76EE8F02B36989300F6D94B /* SceneDelegate.swift */; };
 		A76EE8F62B36989300F6D94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76EE8F42B36989300F6D94B /* Main.storyboard */; };
@@ -22,9 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A71754992B37471900629C5D /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
-		A717549B2B3758D100629C5D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
-		A717549D2B375CBB00629C5D /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A76EE8EB2B36989300F6D94B /* TestHotel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHotel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76EE8EE2B36989300F6D94B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A76EE8F02B36989300F6D94B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,9 +65,6 @@
 				A76EE8EE2B36989300F6D94B /* AppDelegate.swift */,
 				A76EE8F02B36989300F6D94B /* SceneDelegate.swift */,
 				A76EE9022B3699F000F6D94B /* HotelVC.swift */,
-				A71754992B37471900629C5D /* GalleryCollectionView.swift */,
-				A717549D2B375CBB00629C5D /* GalleryCollectionViewCell.swift */,
-				A717549B2B3758D100629C5D /* ImageModel.swift */,
 				A76EE9042B369AA100F6D94B /* RoomVC.swift */,
 				A76EE9062B369B0F00F6D94B /* ReservationVC.swift */,
 				A76EE9082B369BA200F6D94B /* PaidVC.swift */,
@@ -156,15 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A717549A2B37471900629C5D /* GalleryCollectionView.swift in Sources */,
 				A76EE8EF2B36989300F6D94B /* AppDelegate.swift in Sources */,
 				A76EE9052B369AA100F6D94B /* RoomVC.swift in Sources */,
 				A76EE8F12B36989300F6D94B /* SceneDelegate.swift in Sources */,
 				A76EE9032B3699F000F6D94B /* HotelVC.swift in Sources */,
 				A76EE9092B369BA200F6D94B /* PaidVC.swift in Sources */,
 				A76EE9072B369B0F00F6D94B /* ReservationVC.swift in Sources */,
-				A717549E2B375CBB00629C5D /* GalleryCollectionViewCell.swift in Sources */,
-				A717549C2B3758D100629C5D /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

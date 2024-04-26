@@ -38,7 +38,6 @@ class SecondVC: UIViewController {
     }
     fileprivate func loginAlert() {
         let ac = UIAlertController(title: "Зарегистрированы?", message: "Введите ваш логин и пароль", preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         let cancelAction = UIAlertAction(title: "Отмена", style: .default, handler: nil)
         

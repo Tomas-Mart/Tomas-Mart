@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs8-vP-kwk">
-                                <rect key="frame" x="24" y="931" width="327" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5w-LR-RTl">
+                                <rect key="frame" x="24" y="483" width="327" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -28,18 +30,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonRoomAction:" destination="RgK-It-bM3" eventType="touchUpInside" id="sQA-fI-u9w"/>
-                                    <segue destination="RgK-It-bM3" kind="show" identifier="showRoom" id="l8r-Gl-Su0"/>
+                                    <segue destination="RgK-It-bM3" kind="show" id="PFi-Qf-5nG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PQE-c1-cFt"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rs8-vP-kwk" firstAttribute="bottom" secondItem="PQE-c1-cFt" secondAttribute="bottom" id="Y0B-DA-0gz"/>
-                            <constraint firstItem="rs8-vP-kwk" firstAttribute="leading" secondItem="PQE-c1-cFt" secondAttribute="leading" constant="24" id="glP-Wz-EkU"/>
-                            <constraint firstItem="PQE-c1-cFt" firstAttribute="trailing" secondItem="rs8-vP-kwk" secondAttribute="trailing" constant="24" id="qRG-3F-kDQ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Отель" id="1Nt-ZK-5xB"/>
                     <size key="freeformSize" width="375" height="1000"/>
@@ -56,8 +52,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Aw-oN-lxk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs8-vP-kwk">
                                 <rect key="frame" x="24" y="931" width="327" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -68,17 +65,72 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonRoomAction:" destination="RgK-It-bM3" eventType="touchUpInside" id="jvW-ai-vpS"/>
-                                    <segue destination="ptg-hY-6OR" kind="show" identifier="showReservation" id="2ae-M6-Eaz"/>
+                                    <segue destination="ptg-hY-6OR" kind="show" id="Q8o-R6-2hR"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BMB-xn-c1j">
+                                <rect key="frame" x="16" y="103" width="343" height="257"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="atJ-Ib-te4"/>
+                                    <constraint firstAttribute="height" constant="257" id="htX-WY-nLe"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="QJm-YS-erI">
+                                    <size key="itemSize" width="343" height="257"/>
+                                    <size key="estimatedItemSize" width="343" height="257"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="dKx-X7-hYb" customClass="MyCell" customModule="TestHotel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="257"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kWr-j0-e5P">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="257"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="DVP-1x-fOJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="257"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="257" id="QFd-br-dBX"/>
+                                                        <constraint firstAttribute="width" constant="343" id="d7e-OW-9Ea"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tOj-f1-lM6">
+                                                    <rect key="frame" x="114" y="223" width="115" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="pageIndicatorTintColor" systemColor="systemGray6Color"/>
+                                                    <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </pageControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="DVP-1x-fOJ" secondAttribute="trailing" id="AkJ-IT-eM1"/>
+                                                <constraint firstAttribute="bottom" secondItem="DVP-1x-fOJ" secondAttribute="bottom" id="OKR-Q1-3mK"/>
+                                                <constraint firstItem="DVP-1x-fOJ" firstAttribute="leading" secondItem="kWr-j0-e5P" secondAttribute="leading" id="ghP-9j-1bY"/>
+                                                <constraint firstItem="DVP-1x-fOJ" firstAttribute="top" secondItem="kWr-j0-e5P" secondAttribute="top" id="w2S-rb-Jn4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="343" height="257"/>
+                                        <connections>
+                                            <outlet property="image" destination="DVP-1x-fOJ" id="fUF-CQ-E9h"/>
+                                            <outlet property="page" destination="tOj-f1-lM6" id="NOv-fJ-U5P"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="RgK-It-bM3" id="V81-cK-VFY"/>
+                                    <outlet property="delegate" destination="RgK-It-bM3" id="chS-vE-ftm"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OuU-8Y-THd"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8Aw-oN-lxk" firstAttribute="bottom" secondItem="OuU-8Y-THd" secondAttribute="bottom" id="Q3r-Ob-umw"/>
-                            <constraint firstItem="8Aw-oN-lxk" firstAttribute="leading" secondItem="OuU-8Y-THd" secondAttribute="leading" constant="24" id="bo9-cb-Ofg"/>
-                            <constraint firstItem="OuU-8Y-THd" firstAttribute="trailing" secondItem="8Aw-oN-lxk" secondAttribute="trailing" constant="24" id="dV1-YF-VMS"/>
+                            <constraint firstItem="OuU-8Y-THd" firstAttribute="trailing" secondItem="BMB-xn-c1j" secondAttribute="trailing" constant="16" id="F21-fu-jSW"/>
+                            <constraint firstItem="BMB-xn-c1j" firstAttribute="leading" secondItem="OuU-8Y-THd" secondAttribute="leading" constant="16" id="PXm-mn-1Kc"/>
+                            <constraint firstItem="BMB-xn-c1j" firstAttribute="top" secondItem="OuU-8Y-THd" secondAttribute="top" id="WdL-Ut-Fwh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Лучший отель" id="WKd-4Y-Yya"/>
@@ -86,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgy-y6-mQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="68"/>
+            <point key="canvasLocation" x="1354.9618320610687" y="67.605633802816911"/>
         </scene>
         <!--Бронирование-->
         <scene sceneID="cmh-io-j8R">
@@ -96,8 +148,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSk-L0-28h">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSk-L0-28h">
                                 <rect key="frame" x="24" y="931" width="327" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -108,18 +161,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonRoomAction:" destination="RgK-It-bM3" eventType="touchUpInside" id="0Lp-nd-NC3"/>
-                                    <segue destination="qPR-qF-BhG" kind="show" identifier="showPaid" id="4CU-P4-9TY"/>
+                                    <segue destination="qPR-qF-BhG" kind="show" id="xwc-ec-8fZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="czE-NV-YYK"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="JSk-L0-28h" firstAttribute="leading" secondItem="czE-NV-YYK" secondAttribute="leading" constant="24" id="clJ-gI-fho"/>
-                            <constraint firstItem="czE-NV-YYK" firstAttribute="trailing" secondItem="JSk-L0-28h" secondAttribute="trailing" constant="24" id="sFq-wO-nTh"/>
-                            <constraint firstItem="JSk-L0-28h" firstAttribute="bottom" secondItem="czE-NV-YYK" secondAttribute="bottom" id="yYB-Df-ZFy"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Бронирование" id="Jnp-Ds-MSi"/>
                     <size key="freeformSize" width="375" height="1000"/>
@@ -163,9 +210,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="buttonRoomAction:" destination="RgK-It-bM3" eventType="touchUpInside" id="gIX-0d-fs9"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJm-rJ-EUl">
                                 <rect key="frame" x="137" y="213" width="100" height="100"/>
@@ -212,12 +256,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="1500" height="831"/>
         <image name="Image" width="88" height="88"/>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
